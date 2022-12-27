@@ -14,8 +14,7 @@ public class Ex05Controller extends HttpServlet{
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
+
 		response.setContentType("text/html");
 				
 		PrintWriter out = response.getWriter();
@@ -30,21 +29,12 @@ public class Ex05Controller extends HttpServlet{
 		
 		int age = 2022 - year + 1 ;
 		
-//		out.println("<html><head><title>나이</title></head>");		
-//		out.println("<body><h2> 이름 : " + name + "</h2>");		
-//		out.println("<h3> 나이 : " + age + "</h3> </body> </html>");	
+		out.println("<html><head><title>나이</title></head>");		
+		out.println("<body><h2> 이름 : " + name + "</h2>");		
+		out.println("<h3> 나이 : " + age + "</h3> </body> </html>");	
 		
 		
-		//xml
-		//<name>김인규</name> <age>25</age>
-		//json
-		//{"name" : 김인규 "age" : 24} 이거는 문자열
-		//["김인규","유재석","지석진"] 이거는 문자열?
-		out.println("{\"name\":\"" + name + "\",\"age\":" + age + "}");
 	}
-	
-	
-	
-	
+		
 	
 }
