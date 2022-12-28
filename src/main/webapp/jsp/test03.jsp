@@ -18,6 +18,16 @@
 		String intWeight = request.getParameter("weight");
 		double siz = Integer.parseInt(intSize);
 		double wei = Integer.parseInt(intWeight);
+		double bmi = wei / ((siz/100) * (siz/100));
+		if(bmi<=31){
+			out.println("박기석");
+		}else if(bmi <= 30 && bmi >= 26){
+			out.println("과체중");
+		}else if(bmi <= 25 && bmi >= 21){
+			out.println("정상");
+		}else if(bmi <= 20){
+			out.println("저체중");
+		}
 	
 	%>
 
@@ -29,11 +39,6 @@
 		return bmi;	
 	}	
 	%>
-	
-	
-	<h2><%= bmi(siz, wei)%></h2>
-	
-
 
 	<table border="1">
 		<tr>
@@ -60,7 +65,7 @@
 
 	<h2>BIM 측정 결과</h2>
 	
-	
+	<h2><%= bmi(siz, wei)%></h2>
 
 </body>
 </html>
