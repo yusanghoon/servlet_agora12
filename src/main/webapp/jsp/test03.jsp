@@ -14,28 +14,32 @@
 </head>
 <body>
 	<%
-		String intSize = request.getParameter("size");
+		String intSize = request.getParameter("heigth");
 		String intWeight = request.getParameter("weight");
-		double siz = Integer.parseInt(intSize);
-		double wei = Integer.parseInt(intWeight);
-		double bmi = wei / ((siz/100) * (siz/100));
-		if(bmi<=31){
-			out.println("박기석");
-		}else if(bmi <= 30 && bmi >= 26){
-			out.println("과체중");
+		
+		int heigth = Integer.parseInt(intSize);
+		int wei = Integer.parseInt(intWeight);
+		
+		double bmi = wei / ((heigth/100.0) * (heigth/100.0));
+	
+		String status = null;
+		if(bmi <= 20){
+			status = "저체중";
 		}else if(bmi <= 25 && bmi >= 21){
-			out.println("정상");
-		}else if(bmi <= 20){
-			out.println("저체중");
+			status = "정상";
+		}else if(bmi <= 30 && bmi >= 26){
+			status = "과체중";	
+		}else{
+			status = "비만";	
 		}
 	
 	%>
 
 	<%!
 	
-		public double bmi(double size, double weight){
+		public double bmi(int heigth, int weight){
 		double bmi = 0;		
-		bmi = weight / ((size/100) * (size/100));
+		bmi = weight / ((heigth/100) * (heigth/100));
 		return bmi;	
 	}	
 	%>
@@ -59,13 +63,15 @@
 		</tr>
 		<tr>
 			<td>31이상<td>
-			<td>박기석</td>
+			<td>비만</td>
 		</tr>
 	</table>
 
-	<h2>BIM 측정 결과</h2>
-	
-	<h2><%= bmi(siz, wei)%></h2>
+	<div class="container">
+		<h1>BIM 측정 결과</h1>
+		<div class=display-4>당신은 <span class="display-4 text-info"><%=status %><sapn></div>
+		<div>BIM 수치 : <%=bmi %></div>
+	</div>
 
 </body>
 </html>

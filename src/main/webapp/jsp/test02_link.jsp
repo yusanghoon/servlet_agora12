@@ -13,13 +13,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form method = "get" action="/jsp/test03.jsp">
-		<h3>체격 조건 입력</h3>
-		<input type="text" name="size"><label>cm</label>
-		<input type="text" name="weight"><label>kg</label>
-		<button type="submit">계산</button>
-	</form>
+
+	<div>
+		<h1>날짜 시간 링크</h1>
+		
+		<a href="/jsp/test02.jsp?what=time" class="btn btn-success">현재 시간 확인</a>
+		<a href="/jsp/test02.jsp?what=date" class="btn btn-info">현재 날짜 확인</a>
+	</div>
 
 
 </body>
