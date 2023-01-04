@@ -58,10 +58,6 @@
     
     	String category = request.getParameter("category");
     	
-    	if(category.equals(null)){
-    	 category = "true";	
-    	}
-    
 %>
 
 
@@ -80,17 +76,11 @@
 			</thead>	
 			<tbody>
 		<%for(Map<String, String> channel : list){
-			if(category.equals(null)){
-		%>
+			
+			//카테고리가 일치하면 테이블에 tr 추가
+			//카테고리 없으면 테이블에 tr 추가
+		if(category == null || channel.get("category").equals(category)){%>	
 				<tr>
-					<td><%= channel.get("ch") %></td>
-					<td><%= channel.get("name") %></td>
-					<td><%= channel.get("category") %></td>	
-				<tr>			
-		<% }else if(channel.get("category").equals(category)){
-		
-		%>	
-			<tr>
 					<td><%= channel.get("ch") %></td>
 					<td><%= channel.get("name") %></td>
 					<td><%= channel.get("category") %></td>	
