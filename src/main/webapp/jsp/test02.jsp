@@ -12,7 +12,7 @@
 <body>
 
 	
-<<<<<<< HEAD
+
 	<%
 	//날짜가 보고싶으면 what = date
 	//시간이 보고싶으면 what = time
@@ -31,8 +31,6 @@
 	} else {
 		formatString = timeFormatter.format(now);
 	}
-=======
->>>>>>> ea76b80 ([유상훈])
 
 	
 	%>
