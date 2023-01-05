@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,21 +17,24 @@
 	<link rel="stylesheet" href="/jspTemplete/test02/style.css" type="text/css">
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
-	<jsp:include page="menu.jsp" />
-	<section>
-		<div>곡정보</div>
-		<div>
-			<div>사진</div>
-			<div>곡정보</div>
-		</div>
-		<div>가사</div>
-	<hr>
-		<div>가사 정보 없음</div>
-		
-	</section>	
-	<jsp:include page="footer.jsp" />
+<%
+%>
+   	
+    
+    String idString = request.getParameter("id");
+    
+    Integer id = null;
+    if(idString != null){
+    	id = Integer.parseInt(idString);
+    	
+    }
+   
+    
+  
+   
 
 
+
+	
 </body>
 </html>
