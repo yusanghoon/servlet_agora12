@@ -4,34 +4,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>post method</title>
 </head>
 <body>
 
 	<%
-		// 닉네임을 전달 받고 그대로 보여주기
+		// 닉네임을 전달 받고 그대로 보여주기 
 		String nickname = request.getParameter("nickname");
 	
 		String animal = request.getParameter("animal");
 		
 		String fruit = request.getParameter("fruit");
 		
-		// String food = request.getParameter("food");
+		//String food = request.getParameter("food");
 		String[] foodArray = request.getParameterValues("food");
+		
 		// 민초 피자
-		String foodString="";
-		for(int i = 0; i < foodArray.length; i++){
-			foodString += foodArray[i] + ", ";	//foodString = foodString + foodArray[i] + " ";
+		String foodString = "";
+		for(int i = 0; i < foodArray.length; i++) {
+			 foodString += foodArray[i] + " ";// foodString = foodString + foodArray[i] + " ";
 		}
 		
-		
-		
+	
 	%>
+	
 	<div><%= nickname %></div>
 	<div><%= animal %></div>
 	<div><%= fruit %></div>
 	<div><%= foodString %></div>
-
+	
 
 </body>
 </html>

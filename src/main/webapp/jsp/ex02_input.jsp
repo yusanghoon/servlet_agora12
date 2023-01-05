@@ -16,7 +16,5 @@
 		<button type="submit">입력</button>
 	</form>
 
-
-
 </body>
 </html>

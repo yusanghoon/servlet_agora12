@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>입력페이지</title>
 </head>
 <body>
 	<form method="post" action="/jsp/ex03.jsp">
-		<label>닉네임</label>
+		<label>닉네임 </label>
 		<input type="text" name="nickname">
 		
 		<br>
 		<h3>강아지 or 고양이 or 사자</h3>
-		<label>강아지<input type="radio" name="animal" value="dog"></label>
-		<label>고양이<input type="radio" name="animal" value="cat"></label>
-		<label>사자<input type="radio" name="animal" value="lion"></label>
+		<label>강아지 <input type="radio" name="animal" value="dog"></label>
+		<label>고양이 <input type="radio"  name="animal" value="cat"></label>
+		<label>사자 <input type="radio"  name="animal" value="lion"></label>
 		
 		<h3>좋아하는 과일을 선택하세요</h3>
 		<select name="fruit">
@@ -33,9 +33,8 @@
 		
 		
 		<br>
-		<button type="submit" >입력</button>		
+		<button type="submit">입력</button>
 	</form>
-
 
 </body>
 </html>

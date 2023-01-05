@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-header{
-	weight:100;
+header {
+	height:100px;
 }
 
-.main-menu{
-	weight:100;
+.main-menu {
+	height:40px;
 }
-footer{
-	weight:70;
+
+footer {
+	height:50px;
 }

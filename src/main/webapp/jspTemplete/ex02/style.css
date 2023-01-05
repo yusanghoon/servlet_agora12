@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-header{
-	heigt : 100px;
+header {
+	height:100px;
 }
 
-.main-menu{
-	height: 50px;
+.main-menu {
+	height:40px;
 }
 
-footer{
-	height : 70px;
+footer {
+	height:70px;
 }

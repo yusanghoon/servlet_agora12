@@ -4,4 +4,4 @@
 			<h1>Layout</h1>
 		</header>
 		
-		<% String dateString = "2023년1월3일" ;%>
+		<% String dateString = "2023년1월3일";%>

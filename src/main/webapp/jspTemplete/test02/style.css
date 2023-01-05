@@ -1,15 +1,18 @@
 @charset "UTF-8";
 
-header{
-	height: 100px;
-
+header > .logo {
+	height:100px;
 }
 
-nav{
-	height: 40px;
+header > .search {
+	height:100px;
+}
+
+.main-menu {
+	height:40px;
 }
 
 
-footer{
-	height: 50px;
+footer {
+	height:50px;
 }

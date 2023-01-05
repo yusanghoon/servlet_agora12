@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 		<footer>
 			<div class="text-center mt-3">
-				Copyright © marondal 2021
-			</div>	
+				Copyright 2021. marondal All Rights Reserved.
+			</div>
 		</footer>
